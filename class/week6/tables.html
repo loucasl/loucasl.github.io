@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tables</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <style>
+
+    @import url('https://fonts.googleapis.com/css?family=Oswald:400,500,600,700');
+
+    .height1{
+      height: 75px;
+      text-align: center;
+      color: white;
+    }
+
+    .height2{
+      height: 450px;
+    }
+
+    .white{
+      background-color: rgba(255,255,255,0.9);
+      background-repeat: no-repeat;
+    }
+
+    .flag{
+      width:50px;
+    }
+
+    .bigNav{
+      font-size: 180%;
+    }
+
+    h1{
+      font-size: 3em;
+    }
+
+
+    .flexSpaceAround{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .ad{
+      width: 150px;
+    }
+
+    .ad2{
+      width: 150px;
+      height: 185px;
+    }
+
+    body{
+      background-image: url(img/mountain.jpg);
+      font-family: 'Oswald', sans-serif;
+    }
+
+    ul li{
+      text-decoration: none;
+      border-bottom: solid 2px white;
+      list-style-type: none;
+    }
+
+  </style>
+
+  <body>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12 height1">
+          <h1>WINTER OLYMPIC RANKINGS</h1>
+        </div>
+
+      <div class="row">
+        <div class="col-md-12 height1">
+          <nav>
+            <ul class="flexSpaceAround bigNav">
+              <li><a href="#"></a>HOME</li>
+              <li><a href="#"></a>MORE SPORTS</li>
+              <li><a href="#"></a>SPONSORS</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-10 height2 white">
+
+        <table class="table table-hover">
+          <tr>
+            <th></th>
+            <th>Country</th>
+            <th>Gold Medals</th>
+            <th>Silver Medals</th>
+            <th>Bronze Medals</th>
+            <th>Totals</th>
+          </tr>
+
+          <tr>
+            <td><img src="img/germany.gif" class="flag" /></td>
+            <td>Germany</td>
+            <td>4</td>
+            <td>1</td>
+            <td>2</td>
+            <td>7</td>
+          </tr>
+
+          <tr>
+            <td><img src="img/netherlands.png" class="flag" /></td>
+            <td>Netherlands</td>
+            <td>3</td>
+            <td>2</td>
+            <td>2</td>
+            <td>7</td>
+          </tr>
+
+          <tr>
+            <td><img src="img/norway.png" class="flag" /></td>
+            <td>Norway</td>
+            <td>2</td>
+            <td>4</td>
+            <td>3</td>
+            <td>9</td>
+          </tr>
+
+          <tr>
+            <td><img src="img/canada.png" class="flag" /></td>
+            <td>Canada</td>
+            <td>2</td>
+            <td>4</td>
+            <td>1</td>
+            <td>7</td>
+          </tr>
+
+          <tr>
+            <td><img src="img/usa.png" class="flag" /></td>
+            <td>USA</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>4</td>
+          </tr>
+
+          <tr>
+            <td><img src="img/france.png" class="flag" /></td>
+            <td>France</td>
+            <td>2</td>
+            <td>0</td>
+            <td>1</td>
+            <td>3</td>
+          </tr>
+
+          <tr>
+            <td><img src="img/sweden.png" class="flag"/></td>
+            <td>Sweden</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>2</td>
+          </tr>
+
+          <tr>
+            <td><img src="img/korea.png" class="flag" /></td>
+            <td>Korea</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>2</td>
+          </tr>
+
+        </table>
+
+        </div>
+
+        <div class="col-md-2 height2">
+          <img src="img/burgerKing.png" class="ad"/>
+          <img src="img/coke.jpg" class="ad2"/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 height1 ">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        //get a random color between 0 and 255
+        function getRandomColor() {
+          return Math.floor(Math.random() * 255);
+        }
+
+        var randomColor = $(".randomColor");
+
+        $.each(randomColor, function(index, item) {
+          $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+        })
+
+      })
+    </script>
+  </body>
+</html>

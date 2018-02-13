@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <style>
+
+    .height1{
+      height: 75px;
+    }
+
+    .height2{
+      height: 450px;
+    }
+
+  </style>
+
+  <body>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12 height1 randomColor">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2 height2 randomColor">
+        </div>
+
+        <div class="col-md-8 height2 myConsole">
+        </div>
+
+        <div class="col-md-2 height2 randomColor">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 height1 randomColor">
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        //get a random color between 0 and 255
+        function getRandomColor() {
+          return Math.floor(Math.random() * 255);
+        }
+
+        var randomColor = $(".randomColor");
+
+        $.each(randomColor, function(index, item) {
+          $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+        })
+
+      })
+    </script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+
+
+
+    function writeToCenter(str) {
+      $(".myConsole").append("<br>" + str)
+    }
+
+    function writeObjectToCenter(obj) {
+      $(".myConsole").append("<br>" + JSON.stringify(obj) );
+    }
+
+    writeToCenter("<h4>Testing my console</h4>");
+
+    function addNumbers(num1, num2) {
+
+      //  var result = num1 + num2;
+
+      //  return result;
+      return num1 + num2;
+    }
+
+    var firstNumber = 10;
+    var secondNumber = 15;
+
+    var thirdNumber = addNumbers(firstNumber, secondNumber);
+
+    writeToCenter("third number is " + thirdNumber);
+
+    writeToCenter("another number is " + addNumbers(6, 9));
+
+    var myAriana = {
+      "hair": "ponytail",
+      "career": "singer",
+      "ariana": "grande",
+      "music style": "pop",
+      "inspiration": "mariah",
+    };
+
+    writeObjectToCenter(myAriana);
+
+    for(var key in myAriana){
+      writeToCenter("The key is "+key+" and the value is "+myAriana[key]);
+    }
+
+    writeToCenter(" here is a value "+myAriana.ariana);
+
+//add new key value pair
+    myAriana.voice = "amazing";
+
+    writeObjectToCenter(myAriana);
+
+
+
+
+
+  })
+
+    </script>
+
+
+  </body>
+</html>
