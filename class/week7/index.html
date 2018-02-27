@@ -10,7 +10,7 @@
     height: 75px;
   }
   .height2{
-    height:600px;
+    height:1600px;
   }
 </style>
     <!-- Bootstrap -->
@@ -32,13 +32,13 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-2 height2 randomColor">
+    <div class="col-md-2 randomColor">
 
     </div>
-    <div class="col-md-8 height2 output">
+    <div class="col-md-8 output">
 
     </div>
-    <div class="col-md-2 height2 randomColor">
+    <div class="col-md-2 randomColor">
 
     </div>
   </div>
@@ -124,7 +124,7 @@
         "age":4,
         "name":"Magnolia",
         "owner":"Loucas",
-        "imgURL":"http://andersonguelphjs.github.io/class/week7/img/cat4.jpg"
+        "imgUrl":"http://andersonguelphjs.github.io/class/week7/img/cat4.jpg"
 },
 {
       "breed":"Lion",
@@ -170,8 +170,8 @@
         "age":5,
         "name": "Muncher",
         "owner": "Abel",
-        "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/cat8.jpg"
-}
+        "imgUrl": "http://andersonguelphjs.github.io/class/week7/img/cat9.jpg"
+},
 ];
 
 $(document).ready(function(){
@@ -194,7 +194,7 @@ $(document).ready(function(){
 for(var i=0;i<cats.length;i++){
   console.log("i "+i);
   html+= "<tr>"+
-    "<td>picture</td>"+
+    "<td><img src='"+cats[i].imgUrl+"' /></td>"+
     "<td>"+cats[i].name+"</td>"+
     "<td>"+cats[i].age+"</td>"+
     "<td>"+cats[i].owner+"</td>"+
