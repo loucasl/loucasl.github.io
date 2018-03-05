@@ -1,0 +1,48 @@
+[
+
+  {
+    "smoothieName":"Mango Pineapple",
+    "smoothieIngredients":"Mango, Pineapple, Mango Smoothie Juice",
+    "colour":"Orange",
+    "consistency":"Thick",
+    "flavour":"Sweet Citrus",
+    "soldAt":"McDonalds"
+  },
+
+  {
+    "smoothieName":"Very Berry",
+    "smoothieIngredients":"Blueberry, Strawberry, Cherry, Strawberry Smoothie Juice",
+    "colour":"Purple",
+    "consistency":"Thick",
+    "flavour":"Sweet",
+    "soldAt":"Booster Juice"
+  },
+
+  {
+    "smoothieName":"Chunky Monkey",
+    "smoothieIngredients":"Chocolate, Banana, Milk",
+    "colour":"Brown",
+    "consistency":"Thin",
+    "flavour":"Sweet and Chocolatey",
+    "soldAt":"Booster Juice"
+  },
+
+  {
+    "smoothieName":"Strawberry Banana",
+    "smoothieIngredients":"Strawberry, Banana, Yogurt, Strwberry Smoothie Juice",
+    "colour":"Brown",
+    "consistency":"Thin",
+    "flavour":"Sweet and Creamy",
+    "soldAt":"Tim Hortons"
+  },
+
+  {
+    "smoothieName":"Healthy Smoothie",
+    "smoothieIngredients":"Spinach, Whey, Yogurt, Kale, Mango Juice ",
+    "colour":"Green",
+    "consistency":"Thick",
+    "flavour":"Sweet, Citrus, Savoury",
+    "soldAt":"Naked Cafe"
+  },
+
+]
