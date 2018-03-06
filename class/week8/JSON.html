@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>JSON</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -17,12 +17,46 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+
+<style>
+
+    .height1{
+      height: 200px;
+    }
+
+    .myClass{
+      float: left;
+      padding: 20px;
+      margin: 20px;
+    }
+
+</style>
+
   <body>
+
+    <div class="container output">
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        //get a random color between 0 and 255
+        function getRandomColor() {
+          return Math.floor(Math.random() * 255);
+        }
+
+        var randomColor = $(".randomColor");
+
+        $.each(randomColor, function(index, item) {
+          $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+        })
+
+      })
+    </script>
 
     <script>
 
@@ -30,10 +64,26 @@
       $.getJSON(url).done(function(data){
         console.log("success! ");
         console.dir(data);
+        var dataHtml = "";
+        for (var i = 0; i < data.length; i++) {
+          dataHtml+="<div class='myClass'>"+data[i].smoothieName+"</div>"
+          dataHtml+="<div class='myClass'>"+data[i].smoothieIngredients+"</div>"
+          dataHtml+="<div class='myClass'>"+data[i].colour+"</div>"
+          dataHtml+="<div class='myClass'>"+data[i].consistency+"</div>"
+          dataHtml+="<div class='myClass'>"+data[i].flavour+"</div>"
+          dataHtml+="<div class='myClass'>"+data[i].soldAt+"</div>"
+        }
+        $(document).ready(function() {
+          $(".output").html(dataHtml);
+        })
+
+
 
       }).fail(function(data){
         console.log("failed! "+JSON.stringify(data));
       });
+
+
 
     </script>
   </body>
