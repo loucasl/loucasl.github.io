@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Button 2</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -16,80 +16,61 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-<style>
-
-.height2{
-  height: 600px;
-}
-
-.height1{
-  height: 100px;
-}
-
-.green{
-  background-color: green;
-}
-
-.blue{
-  background-color: blue;
-}
-
-.red{
-  background-color: red;
-}
-
-</style>
-
   </head>
   <body>
 
     <div class="container">
 
       <div class="row">
-        <div class="col-md-3 height2 randomColor">
+        <div class="col-md-12">
+          <button type="button" name="button" class="btn btn-primary buttonOne">New Game</button>
+          <input type="number" name="" value="" class="inputOne form-control"/>
         </div>
-
-        <div class="col-md-9 height2 randomColor">
-        </div>
-
       </div>
+
+
+
 
       <div class="row">
-        <div class="col-md-12 height1 randomColor">
-
+        <div class="col-md-12 myOutput">
         </div>
-
       </div>
 
-      </div>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
- <!-- Include all compiled plugins (below), or include individual files as needed -->
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function() {
 
- <script type="text/javascript">
+      var secretNumber=0;
 
- //when document is loaded
-   $(document).ready(function() {
-     //this function gets a random color between 0 and 255
-     function getRandomColor() {
-       return Math.floor(Math.random() * 255);
-     }
+        $(".buttonOne").on("click", function() {
+          secretNumber = Math.floor(Math.random()*10 + 1);
+          //$(".myOutput").append("the secret number is "+secretNumber + "<br>");
+        })
 
-     var randomColor = $(".randomColor");
+        $(".inputOne").on("change", function() {
+          var inputValue = $(this).val();
 
-     $.each(randomColor, function(index, item) {
-       $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
-     })
+          if (inputValue==secretNumber){
+            $(".myOutput").append("You're right! The secretNumber is "+ $(this).val() + "<br>");
+          }
 
-   })
- </script>
+          else{
+            $(".myOutput").append("You're wrong! Ha Ha!<br>");
+          }
+
+
+          })
+
+      })//end document ready
+
+
+    </script>
 
   </body>
 </html>
