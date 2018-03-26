@@ -96,10 +96,11 @@
       }
 
       function getSelectOptions(){
-        var options =
-          { "Anderson 1":"https://andersonguelphjs.github.io/class/week11/myJSON.json",
-          "Anderson 2":"https://andersonguelphjs.github.io/class/week11/myJSON2.json"}
-        ;
+        var options = {
+          "Anderson 1":"https://andersonguelphjs.github.io/class/week11/myJSON.json",
+          "Anderson 2":"https://andersonguelphjs.github.io/class/week11/myJSON2.json",
+          "Loucas":"https://loucasl.github.io/class/week11/loucasJSON.json"
+        }
         var html="";
 
         for (var key in options){
@@ -184,6 +185,7 @@
                     getSelectOptions();
                     initEvents();
                     getAds();
+                    
                 })
               })
       .fail(function(data) {
