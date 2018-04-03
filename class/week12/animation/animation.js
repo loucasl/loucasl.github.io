@@ -144,6 +144,7 @@ var spriteImages = [{
     "height": 100,
     "name": "coin"
   },
+
   {
     "spriteMapUrl": "images/Madoka.png",
     "numFrames": 8,
@@ -158,13 +159,39 @@ var spriteImages = [{
     "height": 200,
     "name": "cat"
   },
+
   {
     "spriteMapUrl": "images/ari.png",
     "numFrames": 7,
     "width": 3134,
     "height": 422,
     "name": "ari"
+  },
+
+  {
+    "spriteMapUrl":"https://biancabottos.github.io/class/week12/animation/images/sun.png",
+    "numFrames": 2,
+    "width": 500,
+    "height": 100,
+    "name": "sun"
+  },
+
+    {
+      "spriteMapUrl":"https://amiraarshad.github.io/class/week12/animation/images/liam.png",
+      "numFrames": 7,
+      "width": 2732,
+      "height":1417,
+      "name": "liam"
+    },
+
+  {
+    "spriteMapUrl":"https://kiannagram.github.io/class/week12/animation/images/ARTZU.png",
+    "numFrames": 7,
+    "width": 2100,
+    "height": 694,
+    "name": "colour goat"
   }
+
 ];
 var animations = []; //an array to hold the currently existing sprite obects
 var maxAnimations = spriteImages.length; //how many animations we want on the screen at any one time
